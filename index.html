@@ -1,28 +1,429 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" id="theme-color" content="" />
-    <meta name="description" content="Uptime Kuma monitoring tool" />
-    <title>Kolokium Pharmqiis</title>
-    <style>        .noscript-message {
-            font-size: 20px;
-            text-align: center;
-            padding: 10px;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-    </style>
-  <script type="module" crossorigin src="/assets/index-vTT89PEn.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-s7FngxXa.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>KPIKF 2026</title>
+  <meta name="description" content="Summit 2026 — The Premier Tech &amp; Leadership Summit. August 12–14, 2026 at the Grand Convention Center." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <p>Test Landing Page</p>
-<div id="app"></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark"></span>
+        <span class="logo-text">KPIKF <span class="logo-year">2026</span></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="#schedule">Aturcara</a>
+        <a href="#speakers">Penceramah</a>
+        <a href="#projects">Projek</a>
+        <a href="#information">Maklumat</a>
+      </nav>
+
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="main-nav">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+
+        <h1 class="hero-title">Farmasi <em>Teras</em> KKM</h1>
+
+        <div class="badge"><span class="badge-dot"></span>Kolokium Inisiatif Penambahbaikan Kualiti Farmasi</div>
+
+        <div class="hero-meta">
+          <span class="meta-item">
+            <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            23 - 25 September 2026
+          </span>
+          <span class="meta-sep">•</span>
+          <span class="meta-item">
+            <svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Premier Hotel, Klang
+          </span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#schedule" class="btn btn-gold">Aturcara<span class="arrow">→</span></a>
+          <a href="#projects" class="btn btn-outline">Senarai Projek</a>
+        </div>
+      </div>
+
+      <div class="countdown-bar">
+        <div class="container countdown-inner">
+          <div class="countdown-timer" id="countdown" data-target="2026-09-23T08:00:00">
+            <div class="countdown-unit">
+              <span class="countdown-value" id="cd-days">00</span>
+              <span class="countdown-unit-label">Hari</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-value" id="cd-hours">00</span>
+              <span class="countdown-unit-label">Jam</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-value" id="cd-minutes">00</span>
+              <span class="countdown-unit-label">Minit</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-value" id="cd-seconds">00</span>
+              <span class="countdown-unit-label">Saat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule" id="schedule">
+      <div class="container">
+        <div class="schedule-header">
+          <h2 class="schedule-title">Aturcara Kolokium</h2>
+          <!-- <p class="schedule-subtitle">'Ilmu itu bisu, namun maknanya difahami pencinta'</p> -->
+        </div>
+
+        <div class="day-tabs" role="tablist">
+          <button type="button" class="day-tab is-active" data-day="1" role="tab" aria-selected="true">HARI 1 <span class="day-tab-date">• 23 September</span></button>
+          <button type="button" class="day-tab" data-day="2" role="tab" aria-selected="false">HARI 2 <span class="day-tab-date">• 24 September</span></button>
+          <button type="button" class="day-tab" data-day="3" role="tab" aria-selected="false">HARI 3 <span class="day-tab-date">• 25 September</span></button>
+        </div>
+
+        <div class="day-panels">
+          <div class="day-panel is-active" data-day-panel="1">
+            <ol class="agenda-list">
+              <li class="agenda-item is-highlighted">
+                <span class="agenda-time">08:00–09:00</span>
+                <div class="agenda-content">
+                  <h3 class="agenda-title">Pendaftaran &amp; Minum Pagi</h3>
+                </div>
+              </li>
+              <li class="agenda-item">
+                <span class="agenda-time">09:00–09:30</span>
+                <div class="agenda-content">
+                  <h3 class="agenda-title">Majlis Perasmian &amp; Pengenalan Ucaptama</h3>
+                </div>
+              </li>
+              <li class="agenda-item">
+                <span class="agenda-time">09:30–10:30</span>
+                <div class="agenda-content">
+                  <span class="agenda-badge">Ucaptama</span>
+                  <h3 class="agenda-title">Ucaptama: "Kualiti Farmasi Teras KKM"</h3>
+                  <div class="agenda-speaker">
+                    <span class="speaker-avatar">AF</span>
+                    <span class="speaker-name">Dr. Ahmad Faisal</span>
+                  </div>
+                </div>
+              </li>
+              <li class="agenda-item">
+                <span class="agenda-time">10:30–11:00</span>
+                <div class="agenda-content">
+                  <h3 class="agenda-title">Rehat &amp; Minum Pagi</h3>
+                </div>
+              </li>
+              <li class="agenda-item">
+                <span class="agenda-time">11:00–12:30</span>
+                <div class="agenda-content">
+                  <span class="agenda-badge">Bengkel</span>
+                  <h3 class="agenda-title">Bengkel: Penambahbaikan Proses Kualiti</h3>
+                  <div class="agenda-speaker">
+                    <span class="speaker-avatar">NH</span>
+                    <span class="speaker-name">Pn. Nurul Huda</span>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="day-panel" data-day-panel="2">
+            <ol class="agenda-list">
+              <li class="agenda-item is-highlighted">
+                <span class="agenda-time">08:30–09:00</span>
+                <div class="agenda-content">
+                  <h3 class="agenda-title">Pendaftaran</h3>
+                </div>
+              </li>
+              <li class="agenda-item">
+                <span class="agenda-time">09:00–10:00</span>
+                <div class="agenda-content">
+                  <span class="agenda-badge">Ucaptama</span>
+                  <h3 class="agenda-title">Ucaptama: "Inovasi dalam Perkhidmatan Farmasi"</h3>
+                  <div class="agenda-speaker">
+                    <span class="speaker-avatar">RI</span>
+                    <span class="speaker-name">Dr. Ridzuan Ismail</span>
+                  </div>
+                </div>
+              </li>
+              <li class="agenda-item">
+                <span class="agenda-time">10:00–10:30</span>
+                <div class="agenda-content">
+                  <h3 class="agenda-title">Rehat</h3>
+                </div>
+              </li>
+              <li class="agenda-item">
+                <span class="agenda-time">10:30–12:00</span>
+                <div class="agenda-content">
+                  <span class="agenda-badge">Panel</span>
+                  <h3 class="agenda-title">Sesi Panel: Cabaran &amp; Peluang</h3>
+                  <div class="agenda-speaker">
+                    <span class="speaker-avatar">SY</span>
+                    <span class="speaker-name">Pn. Siti Yasmin</span>
+                  </div>
+                </div>
+              </li>
+              <li class="agenda-item">
+                <span class="agenda-time">12:00–13:30</span>
+                <div class="agenda-content">
+                  <h3 class="agenda-title">Makan Tengah Hari</h3>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="day-panel" data-day-panel="3">
+            <ol class="agenda-list">
+              <li class="agenda-item is-highlighted">
+                <span class="agenda-time">09:00–10:00</span>
+                <div class="agenda-content">
+                  <h3 class="agenda-title">Pembentangan Projek Penambahbaikan Kualiti</h3>
+                </div>
+              </li>
+              <li class="agenda-item">
+                <span class="agenda-time">10:00–10:30</span>
+                <div class="agenda-content">
+                  <h3 class="agenda-title">Rehat</h3>
+                </div>
+              </li>
+              <li class="agenda-item">
+                <span class="agenda-time">10:30–12:00</span>
+                <div class="agenda-content">
+                  <span class="agenda-badge">Anugerah</span>
+                  <h3 class="agenda-title">Sesi Anugerah &amp; Pengiktirafan</h3>
+                  <div class="agenda-speaker">
+                    <span class="speaker-avatar">MK</span>
+                    <span class="speaker-name">Dato' Dr. Mohd Khairul</span>
+                  </div>
+                </div>
+              </li>
+              <li class="agenda-item">
+                <span class="agenda-time">12:00–12:30</span>
+                <div class="agenda-content">
+                  <h3 class="agenda-title">Ucapan Penutup</h3>
+                </div>
+              </li>
+              <li class="agenda-item">
+                <span class="agenda-time">12:30–13:30</span>
+                <div class="agenda-content">
+                  <h3 class="agenda-title">Majlis Makan Tengah Hari &amp; Bersurai</h3>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="speakers" id="speakers">
+      <div class="container">
+        <div class="speakers-header">
+          <!-- <span class="eyebrow">Suara Terpilih</span> -->
+          <h2 class="speakers-title">Penceramah</h2>
+          <!-- <p class="speakers-subtitle">Berkongsi pengalaman dan kepakaran daripada pemimpin industri, penyelidik dan pengamal farmasi yang aktif memacu penambahbaikan kualiti.</p> -->
+        </div>
+
+        <div class="speakers-grid">
+          <article class="speaker-card">
+            <div class="speaker-card-header">
+              <div class="speaker-photo">
+                <img src="img/example.png" alt="Dato' Muhammad Fadhli" loading="lazy" />
+              </div>
+              <div class="speaker-card-info">
+                <h3 class="speaker-card-name">Dato' Muhammad Fadhli</h3>
+                <p class="speaker-card-role">Kementerian Kesihatan Malaysia</p>
+                <p class="speaker-card-schedule">23 September • 09:30–10:30</p>
+              </div>
+            </div>
+            <p class="speaker-card-bio">Perunding farmasi klinikal dengan tumpuan kepada penambahbaikan kualiti dan tadbir urus perkhidmatan farmasi.</p>
+          </article>
+
+          <article class="speaker-card">
+            <div class="speaker-card-header">
+              <div class="speaker-photo">
+                <img src="img/example.png" alt="Dr. Muhammad Fadhli" loading="lazy" />
+              </div>
+              <div class="speaker-card-info">
+                <h3 class="speaker-card-name">Dr. Muhammad Fadhli</h3>
+                <p class="speaker-card-role">Bahagian Farmasi</p>
+                <p class="speaker-card-schedule">23 September • 11:00–12:30</p>
+              </div>
+            </div>
+            <p class="speaker-card-bio">Pakar dalam penambahbaikan proses kualiti dan pelaksanaan inisiatif keselamatan pesakit di fasiliti kesihatan.</p>
+          </article>
+
+          <article class="speaker-card">
+            <div class="speaker-card-header">
+              <div class="speaker-photo">
+                <img src="img/example.png" alt="En. Muhammad Fadhli" loading="lazy" />
+              </div>
+              <div class="speaker-card-info">
+                <h3 class="speaker-card-name">En. Muhammad Fadhli</h3>
+                <p class="speaker-card-role">Institut Farmasi Negara</p>
+                <p class="speaker-card-schedule">24 September • 09:00–10:00</p>
+              </div>
+            </div>
+            <p class="speaker-card-bio">Peneraju inovasi dalam perkhidmatan farmasi dengan pengalaman meluas dalam penyelidikan dan pembangunan dasar.</p>
+          </article>
+
+          <article class="speaker-card">
+            <div class="speaker-card-header">
+              <div class="speaker-photo">
+                <img src="img/example.png" alt="Abang Fadhli" loading="lazy" />
+              </div>
+              <div class="speaker-card-info">
+                <h3 class="speaker-card-name">Abang Fadhli</h3>
+                <p class="speaker-card-role">Bahagian Kawal Selia Farmasi</p>
+                <p class="speaker-card-schedule">24 September • 10:30–12:00</p>
+              </div>
+            </div>
+            <p class="speaker-card-bio">Menerajui sesi panel mengenai cabaran dan peluang dalam transformasi perkhidmatan farmasi awam.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="container projects-inner">
+        <div class="projects-intro">
+          <span class="accent-bar"></span>
+          <h2 class="projects-title">Senarai Projek</h2>
+          <!-- <p class="projects-desc">Terokai inisiatif penambahbaikan kualiti yang dibentangkan oleh peserta pada Hari 3. Projek-projek ini mewakili usaha terkini dalam penambahbaikan perkhidmatan farmasi.</p>
+          <a href="#schedule" class="projects-link">LIHAT JADUAL PEMBENTANGAN <span class="arrow">→</span></a> -->
+        </div>
+
+        <div class="projects-list">
+          <article class="project-card">
+            <span class="project-tag">Inovasi</span>
+            <h3 class="project-title">Sistem Semakan Ubat</h3>
+            <p class="project-desc">Modul digital untuk menyemak interaksi ubat secara automatik sebelum penghantaran kepada pesakit.</p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-tag">Kualiti</span>
+            <h3 class="project-title">Laluan Ubat Pantas</h3>
+            <p class="project-desc">Penambahbaikan aliran kerja farmasi untuk mempercepatkan penghantaran ubat kritikal di wad kecemasan.</p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-tag">Digitalisasi</span>
+            <h3 class="project-title">Aplikasi PatuhUbat</h3>
+            <p class="project-desc">Aplikasi mudah alih yang membantu pesakit kronik mematuhi jadual ubat harian mereka.</p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-tag">Kualiti &amp; Audit</span>
+            <h3 class="project-title">Dashboard Petunjuk Kualiti</h3>
+            <p class="project-desc">Papan pemuka masa nyata untuk memantau petunjuk prestasi utama perkhidmatan farmasi hospital.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="information" id="information">
+      <div class="container">
+        <div class="info-header">
+          <h2 class="info-title">Maklumat Kepada Peserta</h2>
+          <p class="info-subtitle">Semua yang anda perlu tahu untuk pengalaman kolokium yang terbaik.</p>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <span class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </span>
+            <h3 class="info-card-title">Lokasi &amp; Tempat</h3>
+            <p class="info-card-desc">Dewan Serai Wangi, Premier Hotel, Klang.</p>
+          </div>
+
+          <div class="info-card">
+            <span class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+            </span>
+            <h3 class="info-card-title">Sambungan WiFi</h3>
+            <p class="info-card-desc">Rangkaian: 'KPIKF2026' | Kata Laluan: 'Farmasi#2026'.</p>
+          </div>
+
+          <div class="info-card">
+            <span class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </span>
+            <h3 class="info-card-title">Talian Kecemasan</h3>
+            <p class="info-card-desc">999 atau dapatkan bantuan daripada mana-mana urusetia berdekatan anda</p>
+          </div>
+
+          <div class="info-card">
+            <span class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"></path><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+            </span>
+            <h3 class="info-card-title">Makanan</h3>
+            <p class="info-card-desc">Sarapan pagi dan makan tengahri di Cafe Mahbub</p>
+          </div>
+
+          <div class="info-card">
+            <span class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"></path><rect x="2" y="6" width="14" height="12" rx="2" ry="2"></rect></svg>
+            </span>
+            <h3 class="info-card-title">Strim Sesi</h3>
+            <p class="info-card-desc">Sesi kolokium boleh distrim terus melalui Google Meet dan Facebook rasmi PPF KKM</p>
+          </div>
+
+          <div class="info-card">
+            <span class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            </span>
+            <h3 class="info-card-title">Maklumat Urusetia</h3>
+            <p class="info-card-desc">Sebarang pertanyaan lanjut boleh diajukan kepada pihak urusetia. Pihak urusetia akan berada di sekitar kawasan aktiviti kolokium.</p>
+          </div>
+
+          <div class="info-card">
+            <span class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            </span>
+            <h3 class="info-card-title">Etika Pakaian</h3>
+            <p class="info-card-desc">Memakai pakaian yang sesuai seperti yang digariskan dalam Etika Pakaian Penjawat Awam</p>
+          </div>
+
+          <!-- <div class="info-card info-cta">
+            <h3 class="info-cta-title">Dapatkan Aplikasi Mudah Alih</h3>
+            <p class="info-cta-desc">Akses jadual penuh, berhubung dengan peserta lain, dan terima kemas kini langsung sepanjang acara.</p>
+            <a href="#" class="info-cta-btn">Cari "KPIKF 2026"</a>
+          </div> -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-text">Direka dan dibina oleh CTMIF, PPF KKM @ 2026</p>
+    </div>
+  </footer>
+
+  <div class="floating-icons">
+    <a href="#" class="floating-icon" aria-label="Facebook">
+      <img src="img/facebook_900x900.png" alt="Facebook" />
+    </a>
+    <a href="#" class="floating-icon" aria-label="Google Meet">
+      <img src="img/meet_900x900.png" alt="Google Meet" />
+    </a>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

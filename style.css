@@ -1411,6 +1411,12 @@ a {
   padding: 28px 0;
 }
 
+@media (max-width: 640px) {
+  .site-footer {
+    padding: 28px 0 96px;
+  }
+}
+
 .footer-text {
   text-align: center;
   font-size: 13px;

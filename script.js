@@ -134,30 +134,6 @@
 })();
 
 (function () {
-  var icons = document.querySelector(".floating-icons");
-  if (!icons) return;
-
-  var mq = window.matchMedia("(max-width: 640px)");
-
-  function onScroll() {
-    icons.classList.toggle("is-visible", window.scrollY > window.innerHeight * 0.6);
-  }
-
-  function handleModeChange() {
-    if (mq.matches) {
-      onScroll();
-      window.addEventListener("scroll", onScroll, { passive: true });
-    } else {
-      window.removeEventListener("scroll", onScroll);
-      icons.classList.remove("is-visible");
-    }
-  }
-
-  mq.addEventListener("change", handleModeChange);
-  handleModeChange();
-})();
-
-(function () {
   var figs = document.querySelectorAll(".hero-fig");
   if (!figs.length) return;
 

@@ -23,6 +23,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -1463,21 +1464,15 @@ a {
 
 @media (max-width: 640px) {
   .floating-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
     top: auto;
     bottom: 16px;
+    left: 16px;
     right: 16px;
-    flex-direction: row;
-    gap: 10px;
-    opacity: 0;
-    transform: translateY(12px);
-    pointer-events: none;
-    transition: opacity 0.25s ease, transform 0.25s ease;
-  }
-
-  .floating-icons.is-visible {
-    opacity: 1;
-    transform: none;
-    pointer-events: auto;
+    gap: 0;
   }
 
   .floating-icon {

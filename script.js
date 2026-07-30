@@ -132,3 +132,134 @@
     observer.observe(section);
   });
 })();
+
+(function () {
+  var icons = document.querySelector(".floating-icons");
+  if (!icons) return;
+
+  var mq = window.matchMedia("(max-width: 640px)");
+
+  function onScroll() {
+    icons.classList.toggle("is-visible", window.scrollY > window.innerHeight * 0.6);
+  }
+
+  function handleModeChange() {
+    if (mq.matches) {
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+    } else {
+      window.removeEventListener("scroll", onScroll);
+      icons.classList.remove("is-visible");
+    }
+  }
+
+  mq.addEventListener("change", handleModeChange);
+  handleModeChange();
+})();
+
+(function () {
+  var figs = document.querySelectorAll(".hero-fig");
+  if (!figs.length) return;
+
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (reduceMotion.matches) return;
+
+  var timer = null;
+
+  function lightRandom() {
+    var fig = figs[Math.floor(Math.random() * figs.length)];
+    fig.classList.remove("is-lit");
+    void fig.offsetWidth;
+    fig.classList.add("is-lit");
+    timer = setTimeout(lightRandom, 1200 + Math.random() * 3200);
+  }
+
+  timer = setTimeout(lightRandom, 900);
+})();
+
+(function () {
+  var track = document.getElementById("tokoh-track");
+  var dots = document.querySelectorAll(".tokoh-dot");
+  if (!track) return;
+
+  var cards = Array.prototype.slice.call(track.querySelectorAll(".tokoh-card"));
+  if (!cards.length) return;
+
+  var MAX_SCALE = 1.15;
+  var MIN_SCALE = 0.7;
+  var MAX_OPACITY = 1;
+  var MIN_OPACITY = 0.35;
+
+  function goTo(index) {
+    var card = cards[index];
+    if (!card) return;
+    var target = card.offsetLeft + card.offsetWidth / 2 - track.offsetWidth / 2;
+    track.scrollTo({ left: target, behavior: "smooth" });
+  }
+
+  function updateScales() {
+    var trackRect = track.getBoundingClientRect();
+    var centerX = trackRect.left + trackRect.width / 2;
+    var falloff = trackRect.width / 2 + 20;
+    var nearest = 0;
+    var nearestDist = Infinity;
+
+    cards.forEach(function (card, i) {
+      var r = card.getBoundingClientRect();
+      var cardCenter = r.left + r.width / 2;
+      var dist = Math.abs(cardCenter - centerX);
+      var t = Math.min(1, dist / falloff);
+      var scale = MAX_SCALE - t * (MAX_SCALE - MIN_SCALE);
+      var opacity = MAX_OPACITY - t * (MAX_OPACITY - MIN_OPACITY);
+      card.style.transform = "scale(" + scale.toFixed(3) + ")";
+      card.style.opacity = opacity.toFixed(3);
+      if (dist < nearestDist) {
+        nearestDist = dist;
+        nearest = i;
+      }
+    });
+
+    cards.forEach(function (card, i) {
+      card.classList.toggle("is-active", i === nearest);
+    });
+    dots.forEach(function (dot, i) {
+      dot.classList.toggle("is-active", i === nearest);
+    });
+
+    return nearest;
+  }
+
+  var ticking = false;
+  track.addEventListener(
+    "scroll",
+    function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        updateScales();
+        ticking = false;
+      });
+    },
+    { passive: true }
+  );
+
+  dots.forEach(function (dot, i) {
+    dot.addEventListener("click", function () {
+      goTo(i);
+    });
+  });
+
+  cards.forEach(function (card, i) {
+    card.addEventListener("click", function () {
+      if (!card.classList.contains("is-active")) goTo(i);
+    });
+  });
+
+  window.addEventListener("resize", function () {
+    updateScales();
+    goTo(updateScales());
+  });
+
+  goTo(1);
+  updateScales();
+})();
